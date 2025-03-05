@@ -6,11 +6,14 @@ public class InputManager : MonoBehaviour
     public UnityEvent<Vector2> OnMove = new UnityEvent<Vector2>();
     public UnityEvent OnSpacePressed = new UnityEvent();
 
-    public bool isGrounded;
+    public UnityEvent<Vector3> OnJump = new UnityEvent<Vector3>();
+
 
     void Update()
     {
         Vector2 input = Vector2.zero;
+
+        Vector3 input2 = Vector3.zero;
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -28,11 +31,8 @@ public class InputManager : MonoBehaviour
         {
             input += Vector2.right;
         }
-        if (Input.GetKey(KeyCode.Space) && isGrounded)
-        {
-            OnSpacePressed?.Invoke();
-            isGrounded = false;
-        }
-        
+        OnMove?.Invoke(input);
+
     }
+    
 }
