@@ -6,8 +6,6 @@ public class InputManager : MonoBehaviour
     public UnityEvent<Vector2> OnMove = new UnityEvent<Vector2>();
     public UnityEvent OnSpacePressed = new UnityEvent();
 
-    public UnityEvent<Vector3> OnJump = new UnityEvent<Vector3>();
-
 
     void Update()
     {
