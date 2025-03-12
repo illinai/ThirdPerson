@@ -1,10 +1,12 @@
 using UnityEngine;
-//using UnityEngine.UI;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     //public static GameManager instance;
     //public Text scoreText;
+    [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private int score = 0;
     
     /*void Awake()
@@ -23,7 +25,8 @@ public class GameManager : MonoBehaviour
     public void incrementScore()
     {
         score ++;
-        //scoreText.text = "Score: " + score;
-        
+        scoreText.text = $"Score: {score}";
+
+
     }
 }
