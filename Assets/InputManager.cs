@@ -29,6 +29,26 @@ public class InputManager : MonoBehaviour
         {
             input += Vector2.right;
         }
+        if(Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
+        {
+            input += Vector2.up;
+            input = input * 2;
+        }
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.S))
+        {
+            input += Vector2.down;
+            input = input * 2;
+        }
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.A))
+        {
+            input += Vector2.left;
+            input = input * 2;
+        }
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.D))
+        {
+            input += Vector2.right;
+            input = input * 2;
+        }
         OnMove?.Invoke(input);
 
     }
