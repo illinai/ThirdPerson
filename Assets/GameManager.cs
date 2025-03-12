@@ -1,13 +1,13 @@
 using UnityEngine;
-using UnityEngine.UI;
+//using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
-    public Text scoreText;
-    private int score = 0;
+    //public static GameManager instance;
+    //public Text scoreText;
+    [SerializeField] private int score = 0;
     
-    void Awake()
+    /*void Awake()
     {
         if (instance == null)
         {
@@ -18,12 +18,12 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-    }
+    }*/
 
-    public void AddScore(int amount)
+    public void incrementScore()
     {
-        score += amount;
-        scoreText.text = "Score: " + score;
+        score ++;
+        //scoreText.text = "Score: " + score;
         
     }
 }

@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 162933293}
   m_Layer: 0
   m_Name: PlayerModel
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -826,7 +826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050ec6965f9f24eac8d97c7ec265f279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 100
+  rotationSpeed: 50
   floatAmp: 0.2
   floatSpeed: 2
 --- !u!1 &1432898341
@@ -1405,6 +1405,10 @@ PrefabInstance:
     - target: {fileID: 1909477793948664903, guid: 2714a7c35c2ce47778e0441bae4d294e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4437634548862122331, guid: 2714a7c35c2ce47778e0441bae4d294e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7796049013951744574, guid: 2714a7c35c2ce47778e0441bae4d294e, type: 3}
       propertyPath: m_Name
